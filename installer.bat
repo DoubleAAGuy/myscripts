@@ -28,7 +28,7 @@ set "plinkUrl=https://putty.cs.utah.edu/0.83/w64/plink.exe"
 set "plinkDest=%USERPROFILE%\Desktop\BravePortable\plink.exe"
 
 echo ==========================================
-echo           INSTALLER SECURITY
+echo           INSTALLER SECURITY v1
 echo ==========================================
 
 
