@@ -1,24 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: --- AUTO-UPDATER FOR INSTALLER ---
-set "scriptUrl=https://raw.githubusercontent.com/DoubleAAGuy/myscripts/refs/heads/main/installer.bat"
-set "tempScript=%TEMP%\installer_new.bat"
 
-curl -s -L "%scriptUrl%" -o "%tempScript%"
-if exist "%tempScript%" (
-    :: Check if the file is different and not empty
-    for %%I in ("%tempScript%") do if %%~zI GTR 0 (
-        fc "%~f0" "%tempScript%" >nul 2>&1
-        if !errorlevel! neq 0 (
-            echo Updating installer to latest version...
-            :: The & allows the move and restart to happen as the process handles the file swap
-            move /y "%tempScript%" "%~f0" >nul & start "" "%~f0" & exit
-        ) else (
-            del "%tempScript%"
-        )
-    )
-)
 
 :: --- CONFIGURATION ---
 set "destFolder=%USERPROFILE%\Desktop\BravePortable"
