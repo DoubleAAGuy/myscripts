@@ -1,4 +1,5 @@
 @echo off
+cls
 echo Starting bypass...
 :: -D 1080 sets up the SOCKS proxy
 :: -pw password67 handles the authentication
