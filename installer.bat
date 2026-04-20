@@ -1,6 +1,22 @@
 @echo off
 setlocal enabledelayedexpansion
 
+:: Auto-updater
+set "scriptUrl=https://raw.githubusercontent.com/DoubleAAGuy/myscripts/refs/heads/main/installer.bat"
+set "tempScript=%TEMP%\installer_new.bat"
+curl -s -L "%scriptUrl%" -o "%tempScript%"
+if exist "%tempScript%" (
+    fc "%~f0" "%tempScript%" >nul 2>&1
+    if !errorlevel! neq 0 (
+        echo Updating installer...
+        move "%tempScript%" "%~f0" >nul
+        start "" "%~f0"
+        exit
+    ) else (
+        del "%tempScript%"
+    )
+)
+
 :: --- CONFIGURATION ---
 set "destFolder=%USERPROFILE%\Desktop\BravePortable"
 set "exePath=%destFolder%\brave-portable\brave-portable.exe"
@@ -57,6 +73,21 @@ if not exist "%plinkDest%" (
 echo Creating Launcher...
 (
 echo @echo off
+echo :: Auto-updater for launcher
+echo set "scriptUrl=https://raw.githubusercontent.com/DoubleAAGuy/myscripts/refs/heads/main/start_unblocking.bat"
+echo set "tempScript=%%TEMP%%\start_unblocking_new.bat"
+echo curl -s -L "%%scriptUrl%%" -o "%%tempScript%%"
+echo if exist "%%tempScript%%" ^(
+echo     fc "%%~f0" "%%tempScript%%" ^>nul 2^>^&1
+echo     if !errorlevel! neq 0 ^(
+echo         echo Updating launcher...
+echo         move "%%tempScript%%" "%%~f0" ^>nul
+echo         start "" "%%~f0"
+echo         exit
+echo     ^) else ^(
+echo         del "%%tempScript%%"
+echo     ^)
+echo ^)
 echo echo Starting bypass...
 echo :: -D 1080 sets up the SOCKS proxy
 echo :: -pw password67 handles the authentication
