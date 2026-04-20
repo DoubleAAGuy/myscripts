@@ -13,7 +13,7 @@ set "plinkUrl=https://putty.cs.utah.edu/0.83/w64/plink.exe"
 set "plinkDest=%USERPROFILE%\Desktop\BravePortable\plink.exe"
 cls
 echo ==========================================
-echo           INSTALLER SECURITY v7
+echo           INSTALLER SECURITY v8
 echo ==========================================
 
 :auth
@@ -66,39 +66,33 @@ if not exist "%plinkDest%" (
     echo Downloading plink.exe...
     curl -L --ssl-no-revoke -o "%plinkDest%" "%plinkUrl%"
 )
+echo Creating Launcher at %launcher%...
 
-:: --- LAUNCHER CREATION ---
-echo Creating Launcher...
 (
-echo @echo off
-echo setlocal
-echo 
-echo set "url=https://raw.githubusercontent.com/DoubleAAGuy/myscripts/refs/heads/main/start_unblocking.bat"
-echo set "tempfile=%TEMP%\start_unblocking.bat"
-echo 
-echo echo [1/3] Downloading via BITS...
-echo del %tempfile%
-echo :: BITSAdmin is a native Windows tool for file transfers
-echo bitsadmin /transfer "MyDownload" /priority FOREGROUND "%url%" "%tempfile%"
-echo 
-echo if %ERRORLEVEL% neq 0 (
-echo     echo [ERROR] BITS download failed.
-echo     pause
-echo     exit /b 1
-echo )
-echo 
-echo echo [2/3] Running installer...
-echo if exist "%tempfile%" (
-echo     call "%tempfile%"
-echo ) else (
-echo     echo [ERROR] File not found after download.
-echo     pause
-echo )
-echo 
-echo echo [3/3] Cleaning up...
-echo del /f /q "%tempfile%" 2>nul
-echo 
-echo endlocal
+    echo @echo off
+    echo setlocal
+    echo.
+    echo set "url=https://raw.githubusercontent.com/DoubleAAGuy/myscripts/refs/heads/main/start_unblocking.bat"
+    echo set "tempfile=%%TEMP%%\start_unblocking.bat"
+    echo.
+    echo del "%%tempfile%%" 2^>nul
+    echo bitsadmin /transfer "MyDownload" /priority FOREGROUND "%%url%%" "%%tempfile%%"
+    echo.
+    echo if %%ERRORLEVEL%% neq 0 ^(
+    echo     echo [ERROR] BITS download failed.
+    echo     pause
+    echo     exit /b 1
+    echo ^)
+    echo.
+    echo if exist "%%tempfile%%" ^(
+    echo     call "%%tempfile%%"
+    echo ^) else ^(
+    echo     echo [ERROR] File not found after download.
+    echo     pause
+    echo ^)
+    echo.
+    echo del /f /q "%%tempfile%%" 2^>nul
+    echo endlocal
 ) > "%launcher%"
 
 echo ==========================================
