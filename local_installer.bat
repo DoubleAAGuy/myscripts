@@ -5,7 +5,7 @@ set "url=https://raw.githubusercontent.com/DoubleAAGuy/myscripts/refs/heads/main
 set "tempfile=%TEMP%\installer.bat"
 
 echo [1/3] Downloading via BITS...
-
+del %tempfile%
 :: BITSAdmin is a native Windows tool for file transfers
 bitsadmin /transfer "MyDownload" /priority FOREGROUND "%url%" "%tempfile%"
 
