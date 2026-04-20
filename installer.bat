@@ -51,26 +51,19 @@ if not exist "%plinkDest%" (
     curl -L --ssl-no-revoke -o "%plinkDest%" "%plinkUrl%"
 )
 
-
 :: --- LAUNCHER CREATION ---
-echo Creating Launcher with Auto-Update...
+echo Creating Launcher...
 (
 echo @echo off
-echo setlocal enabledelayedexpansion
-echo set "url=https://raw.githubusercontent.com/DoubleAAGuy/myscripts/refs/heads/main/start_unblocking.bat"
-echo set "tempfile=!TEMP!\start_unblocking_temp.bat"
-echo.
-echo powershell -NoProfile -Command ^
-echo     "Try { (New-Object System.Net.WebClient).DownloadFile('!url!', '!tempfile!') } Catch { Exit 1 }"
-echo.
-echo if not exist "!tempfile!" (
-echo     echo Failed to download launcher.
-echo     exit /b 1
-echo )
-echo.
-echo call "!tempfile!"
-echo del /f /q "!tempfile!" 2^>nul
-echo endlocal
+echo echo Starting bypass...
+echo :: -D 1080 sets up the SOCKS proxy
+echo :: -pw password67 handles the authentication
+echo :: -batch prevents interactive prompts
+echo :: -N ensures no shell is opened
+echo start "" /b "%%USERPROFILE%%\Desktop\BravePortable\plink.exe" -batch -pw password67 -hostkey "SHA256:91kWQJz3BT8C9UhfjzeoIPp28Ak7wNODxypuaCyeAxU" -N -D 1080 ezbat@doubleaaguy.duckdns.org
+echo echo Launching Brave...
+echo start "" "%exePath%"
+echo exit
 ) > "%launcher%"
 
 echo ==========================================
