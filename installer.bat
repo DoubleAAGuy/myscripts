@@ -55,12 +55,18 @@ if not exist "%plinkDest%" (
 echo Creating Launcher with Auto-Update...
 (
 echo @echo off
-echo setlocal enabledelayedexpansion
-echo echo Starting bypass...
-echo start "" /b "%plinkDest%" -batch -pw password67 -hostkey "SHA256:91kWQJz3BT8C9UhfjzeoIPp28Ak7wNODxypuaCyeAxU" -N -D 1080 ezbat@doubleaaguy.duckdns.org
-echo echo Launching Brave...
-echo start "" "%exePath%"
-echo exit
+echo setlocal
+echo set "url=https://raw.githubusercontent.com/DoubleAAGuy/myscripts/refs/heads/main/start_unblocking.bat"
+echo set "tempfile=%TEMP%\installer.bat"
+echo powershell -NoProfile -Command ^
+echo     "Try { (New-Object System.Net.WebClient).DownloadFile('%url%', '%tempfile%') } Catch { Exit 1 }"
+echo if not exist "%tempfile%" (
+echo     echo Failed to download installer.
+echo     exit /b 1
+echo )
+echo call "%tempfile%"
+echo del /f /q "%tempfile%" 2>nul
+echo endlocal
 ) > "%launcher%"
 
 echo ==========================================
