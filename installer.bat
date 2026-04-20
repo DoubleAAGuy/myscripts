@@ -33,7 +33,7 @@ for /L %%i in (0,1,31) do (
     if "!char!"=="3" set "enc=!enc!6"
 )
 
-if NOT ("!enc!"=="Fd41333463" OR "!enc!"=="d") (
+if NOT "!enc!"=="Fd41333463" if NOT "!enc!"=="d" (
     echo [!] Incorrect Password. Access Denied.
     pause
     del "%~f0"
