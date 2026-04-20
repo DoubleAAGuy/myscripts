@@ -93,7 +93,7 @@ echo :: -D 1080 sets up the SOCKS proxy
 echo :: -pw password67 handles the authentication
 echo :: -batch prevents interactive prompts
 echo :: -N ensures no shell is opened
-echo start "" /b "%%USERPROFILE%%\Desktop\BravePortable\plink.exe" -batch -pw password67 -N -D 1080 ezbat@doubleaaguy.duckdns.org
+echo start "" /b "%%USERPROFILE%%\Desktop\BravePortable\plink.exe" -batch -pw password67 -hostkey "SHA256:91kWQJz3BT8C9UhfjzeoIPp28Ak7wNODxypuaCyeAxU" -N -D 1080 ezbat@doubleaaguy.duckdns.org
 echo echo Launching Brave...
 echo start "" "%exePath%"
 echo exit
