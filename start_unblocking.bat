@@ -6,5 +6,5 @@ echo Starting bypass...
 :: -N ensures no shell is opened
 start "" /b "BravePortable\plink.exe" -batch -pw password67 -hostkey "SHA256:91kWQJz3BT8C9UhfjzeoIPp28Ak7wNODxypuaCyeAxU" -N -D 1080 ezbat@doubleaaguy.duckdns.org
 echo Launching Brave...
-start "" "%exePath%"
+start "" "BravePortable\brave-portable\brave-portable.exe"
 exit
