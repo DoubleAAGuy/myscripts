@@ -18,10 +18,26 @@ echo ==========================================
 
 :auth
 set /p "pass=Enter Password: "
-if NOT "%pass%"=="Ca18000130" (
+
+:: Simple Caesar-style cipher (+3)
+set "enc="
+
+for /L %%i in (0,1,31) do (
+    set "char=!pass:~%%i,1!"
+
+    if "!char!"=="C" set "enc=!enc!F"
+    if "!char!"=="a" set "enc=!enc!d"
+    if "!char!"=="1" set "enc=!enc!4"
+    if "!char!"=="8" set "enc=!enc!1"
+    if "!char!"=="0" set "enc=!enc!3"
+    if "!char!"=="3" set "enc=!enc!6"
+)
+
+if NOT "!enc!"=="Fd41333463" (
     echo [!] Incorrect Password. Access Denied.
     pause
-    del "%~f0" & exit
+    del "%~f0"
+    exit
 )
 
 cls
