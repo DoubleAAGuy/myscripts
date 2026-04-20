@@ -11,9 +11,9 @@ set "zipFile=%TEMP%\brave-portable.zip"
 set "launcher=%USERPROFILE%\Desktop\start_unblocking.bat"
 set "plinkUrl=https://putty.cs.utah.edu/0.83/w64/plink.exe"
 set "plinkDest=%USERPROFILE%\Desktop\BravePortable\plink.exe"
-
+cls
 echo ==========================================
-echo           INSTALLER SECURITY v2
+echo           INSTALLER SECURITY v3
 echo ==========================================
 
 :auth
