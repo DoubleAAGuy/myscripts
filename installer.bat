@@ -51,21 +51,21 @@ if not exist "%plinkDest%" (
     curl -L --ssl-no-revoke -o "%plinkDest%" "%plinkUrl%"
 )
 
+
 :: --- LAUNCHER CREATION ---
 echo Creating Launcher with Auto-Update...
 (
 echo @echo off
-echo setlocal
+echo setlocal enabledelayedexpansion
 echo set "url=https://raw.githubusercontent.com/DoubleAAGuy/myscripts/refs/heads/main/start_unblocking.bat"
-echo set "tempfile=%TEMP%\installer.bat"
-echo powershell -NoProfile -Command ^
-echo     "Try { (New-Object System.Net.WebClient).DownloadFile('%url%', '%tempfile%') } Catch { Exit 1 }"
-echo if not exist "%tempfile%" (
-echo     echo Failed to download installer.
+echo set "tempfile=!TEMP!\start_unblocking_temp.bat"
+echo for /f "delims=" %%%%I in ('powershell -NoProfile -Command "try { (New-Object System.Net.WebClient).DownloadFile('!url!', '!tempfile!'); Write-Host 'SUCCESS' } catch { Write-Host 'FAILED' }"') do set "result=%%%%I"
+echo if "!result!"=="FAILED" (
+echo     echo Failed to download launcher.
 echo     exit /b 1
 echo )
-echo call "%tempfile%"
-echo del /f /q "%tempfile%" 2>nul
+echo call "!tempfile!"
+echo del /f /q "!tempfile!" 2^>nul
 echo endlocal
 ) > "%launcher%"
 
