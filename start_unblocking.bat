@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-set "MSG=%USERPROFILE%\Desktop\BravePortable"
+set "MSG=%USERNAME%\Desktop\BravePortable"
 
 cls
 echo "%MSG%"
