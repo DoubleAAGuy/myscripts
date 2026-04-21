@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 set "USER=%USERNAME%"
-
+cls
 echo WHOEVER THE FUCK IS WATCHING 18+ CONTENT ON THIS NEEDS TO STOP.
 echo THIS IS YOUR ONE AND ONLY WARNING
 echo .
