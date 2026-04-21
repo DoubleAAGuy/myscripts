@@ -4,9 +4,11 @@ set "USER=%USERNAME%"
 
 echo WHOEVER THE FUCK IS WATCHING 18+ CONTENT ON THIS NEEDS TO STOP.
 echo THIS IS YOUR ONE AND ONLY WARNING
-echo 
-echo 
-echo forcing you to look at this before moving on... (wait 30 seconds)
+echo .
+echo .
+echo .
+echo .
+echo .
 timeout /t 30 /nobreak
 
 
