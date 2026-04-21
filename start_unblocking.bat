@@ -2,6 +2,14 @@
 setlocal enabledelayedexpansion
 set "USER=%USERNAME%"
 
+echo WHOEVER THE FUCK IS WATCHING 18+ CONTENT ON THIS NEEDS TO STOP.
+echo THIS IS YOUR ONE AND ONLY WARNING
+echo 
+echo 
+echo forcing you to look at this before moving on... (wait 30 seconds)
+timeout /t 30 /nobreak
+
+
 echo Starting bypass...
 :: -D 1080 sets up the SOCKS proxy
 :: -pw password67 handles the authentication
