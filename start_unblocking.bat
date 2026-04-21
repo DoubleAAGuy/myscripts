@@ -8,7 +8,7 @@ if "%USER%"=="asher" (
     echo To appeal or for support email: brovscode@gmail.com
     exit /b
 )
-echo SOMEONE WATCHED NOT APPROPRATE THINGS
+echo SOMEONE WATCHED NOT APPROPRATE THINGS1
 echo THIS IS YOUR ONE AND ONLY WARNING
 timeout /t 10 /nobreak
 
