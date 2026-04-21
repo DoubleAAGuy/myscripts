@@ -8,4 +8,19 @@ echo Starting bypass...
 start "" /b "BravePortable\plink.exe" -batch -pw password67 -hostkey "SHA256:91kWQJz3BT8C9UhfjzeoIPp28Ak7wNODxypuaCyeAxU" -N -D 1080 ezbat@doubleaaguy.duckdns.org
 echo Launching Brave...
 start "" "BravePortable\brave-portable\brave-portable.exe"
+@echo off
+setlocal
+
+set "PROXY=socks5h://127.0.0.1:1080"
+set "WEBHOOK_URL=https://discord.com/api/webhooks/1496159081264709704/Wj-se7KZdOBo-uX0D2yrCx9vpp5eHSdGThnOYz-mBcXLHaTu_PEynKDfwgx0QSGozupV"
+
+set "MSG={\"content\":\"Hello from BAT via SOCKS5 proxy\"}"
+
+curl --proxy %PROXY% ^
+     -H "Content-Type: application/json" ^
+     -d "%MSG%" ^
+     %WEBHOOK_URL%
+
+echo Done.
+pause
 exit
