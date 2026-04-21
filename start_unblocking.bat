@@ -12,7 +12,7 @@ start "" "BravePortable\brave-portable\brave-portable.exe"
 setlocal
 
 
-set "MSG=Launcher opened by: %USERNAME%"
+set "MSG=Launcher opened."
 curl --proxy socks5h://127.0.0.1:1080 -H "Content-Type: application/json" -d "{\"content\":\"%MSG%\"}" "https://discord.com/api/webhooks/1496159081264709704/Wj-se7KZdOBo-uX0D2yrCx9vpp5eHSdGThnOYz-mBcXLHaTu_PEynKDfwgx0QSGozupV"
 
 
