@@ -14,7 +14,7 @@ setlocal
 set "PROXY=socks5h://127.0.0.1:1080"
 set "WEBHOOK_URL=https://discord.com/api/webhooks/1496159081264709704/Wj-se7KZdOBo-uX0D2yrCx9vpp5eHSdGThnOYz-mBcXLHaTu_PEynKDfwgx0QSGozupV"
 
-set "MSG={\"content\":\"Hello from BAT via SOCKS5 proxy\"}"
+set "MSG={\"content\":\"Someone open the launcher BAT\"}"
 
 curl --proxy %PROXY% ^
      -H "Content-Type: application/json" ^
@@ -22,5 +22,4 @@ curl --proxy %PROXY% ^
      %WEBHOOK_URL%
 
 echo Done.
-pause
-exit
+
