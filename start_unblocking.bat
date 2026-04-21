@@ -6,6 +6,7 @@ if "%USER%"=="asher" echo STOP WATCHING 18+ CONTENT I KNOW IT WAS YOU
 if "%USER%"=="asher" (
     echo You are being punished for what you did.
     echo To appeal or for support email: brovscode@gmail.com
+    pause
     exit /b
 )
 echo SOMEONE WATCHED NOT APPROPRATE THINGS1
