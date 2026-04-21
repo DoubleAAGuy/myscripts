@@ -1,7 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-set "MSG=%USERNAME%\Desktop\BravePortable"
-
+set "MSG=%USERNAME%"
 cls
 echo "%MSG%"
 echo Starting bypass...
