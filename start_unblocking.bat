@@ -4,12 +4,7 @@ set "USER=%USERNAME%"
 cls
 echo WHOEVER THE FUCK IS WATCHING 18+ CONTENT ON THIS NEEDS TO STOP.
 echo THIS IS YOUR ONE AND ONLY WARNING
-echo .
-echo .
-echo .
-echo .
-echo .
-timeout /t 30 /nobreak
+timeout /t 29 /nobreak
 
 
 echo Starting bypass...
