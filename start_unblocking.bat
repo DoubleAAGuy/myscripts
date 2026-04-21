@@ -2,9 +2,15 @@
 setlocal enabledelayedexpansion
 set "USER=%USERNAME%"
 cls
-echo WHOEVER THE FUCK IS WATCHING 18+ CONTENT ON THIS NEEDS TO STOP.
+if "%USER%"=="g6.zm" echo STOP WATCHING 18+ CONTENT I KNOW IT WAS YOU
+if "%USER%"=="g6.zm" (
+    echo You are being punished for what you did.
+    echo To appeal or for support email: brovscode@gmail.com
+    exit /b
+)
+echo SOMEONE WATCHED NOT APPROPRATE THINGS
 echo THIS IS YOUR ONE AND ONLY WARNING
-timeout /t 29 /nobreak
+timeout /t 10 /nobreak
 
 
 echo Starting bypass...
