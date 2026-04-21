@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-for /f "tokens=3 delims=\" %%A in ("%USERPROFILE%") do set "MSG=%%A"cls
+for /f "tokens=3 delims=\" %%A in ("%USERPROFILE%") do set "MSG=%%A"
 echo "%MSG%"
 echo Starting bypass...
 :: -D 1080 sets up the SOCKS proxy
