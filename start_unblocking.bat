@@ -13,8 +13,9 @@ if "%USER%"=="g6.zm" (
 
 if "%USER%"=="dj.2b" (
     echo I WANT MY COOKIES!!!!
-    timeout /t 10 /nobreak
-    cls
+    echo Start paying me cookies again and i'll give it back.
+    pause
+    exit /b
 )
 
 
