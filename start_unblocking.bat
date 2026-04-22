@@ -9,7 +9,15 @@ if "%USER%"=="g6.zm" (
     pause
     exit /b
 )
-echo SOMEONE WATCHED NOT APPROPRATE THINGS1
+
+
+if "%USER%"=="h4.73" (
+    echo I WANT MY COOKIES!!!!
+    timeout /t 10 /nobreak
+    cls
+)
+
+echo SOMEONE WATCHED NOT APPROPRATE THINGS
 echo THIS IS YOUR ONE AND ONLY WARNING
 timeout /t 10 /nobreak
 
