@@ -11,7 +11,7 @@ if "%USER%"=="g6.zm" (
 )
 
 
-if "%USER%"=="h4.73" (
+if "%USER%"=="dj.2b" (
     echo I WANT MY COOKIES!!!!
     timeout /t 10 /nobreak
     cls
