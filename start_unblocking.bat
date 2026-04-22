@@ -4,7 +4,7 @@ set "USER=%USERNAME%"
 cls
 if "%USER%"=="g6.zm" echo STOP WATCHING 18+ CONTENT I KNOW IT WAS YOU
 if "%USER%"=="g6.zm" (
-    echo You are being punished for what you did.
+    echo You are currently banned.
     echo To appeal or for support email: brovscode@gmail.com
     pause
     exit /b
