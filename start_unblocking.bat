@@ -26,7 +26,7 @@ if "%USER%"=="h4.73" (
 
 echo SOMEONE WATCHED NOT APPROPRATE THINGS
 echo THIS IS YOUR ONE AND ONLY WARNING
-timeout /t 10 /nobreak
+timeout /t 10
 
 
 echo Starting bypass...
