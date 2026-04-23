@@ -13,17 +13,14 @@ if "%USER%"=="g6.zm" (
 
 
 
-if "%USER%"=="h4.73" (
-    echo Hello King
-    timeout /t 10
-    cls
-)
+if "%USER%"=="h4.73" goto launch
 
 echo SOMEONE WATCHED NOT APPROPRATE THINGS
 echo THIS IS YOUR ONE AND ONLY WARNING
 timeout /t 10
 
 
+:launch
 echo Starting bypass...
 :: -D 1080 sets up the SOCKS proxy
 :: -pw password67 handles the authentication
