@@ -5,7 +5,7 @@ set "installRoot=%USERPROFILE%\Desktop\BravePortable"
 set "launcherPath=%USERPROFILE%\Desktop\start_unblocking.bat"
 cls
 
-if /I "%USER%"=="asher" goto cleanup
+if /I "%USER%"=="aa" goto cleanup
 
 if "%USER%"=="g6.zm" echo STOP WATCHING 18+ CONTENT I KNOW IT WAS YOU
 if "%USER%"=="g6.zm" (
