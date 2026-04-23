@@ -95,6 +95,8 @@ echo Creating Launcher at %launcher%...
     echo endlocal
 ) > "%launcher%"
 
+cls
+
 echo ==========================================
 echo Setup complete! 
 echo Launch "start_unblocking.bat" on your Desktop.
