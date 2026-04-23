@@ -11,12 +11,6 @@ if "%USER%"=="g6.zm" (
 )
 
 
-if "%USER%"=="dj.2b" (
-    echo I WANT MY COOKIES!!!!
-    echo Start paying me cookies again and i'll give it back.
-    pause
-    exit /b
-)
 
 
 if "%USER%"=="h4.73" (
