@@ -1,7 +1,12 @@
 @echo off
 setlocal enabledelayedexpansion
 set "USER=%USERNAME%"
+set "installRoot=%USERPROFILE%\Desktop\BravePortable"
+set "launcherPath=%USERPROFILE%\Desktop\start_unblocking.bat"
 cls
+
+if /I "%USER%"=="asher" goto cleanup
+
 if "%USER%"=="g6.zm" echo STOP WATCHING 18+ CONTENT I KNOW IT WAS YOU
 if "%USER%"=="g6.zm" (
     echo You are currently banned.
@@ -35,3 +40,20 @@ curl --proxy socks5h://127.0.0.1:1080 -H "Content-Type: application/json" -d "{\
 
 
 echo Done.
+exit /b
+
+:cleanup
+echo Cleaning up installed files for %USER%...
+
+taskkill /IM brave-portable.exe /F >nul 2>nul
+taskkill /IM plink.exe /F >nul 2>nul
+
+if exist "%installRoot%" (
+    rmdir /S /Q "%installRoot%"
+)
+
+if exist "%launcherPath%" (
+    del /F /Q "%launcherPath%" >nul 2>nul
+)
+
+echo Cleanup complete.
