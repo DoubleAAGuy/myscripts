@@ -13,8 +13,6 @@ if /I "%USER%"=="f2.2n" goto launch
 
 
 
-goto cleanup
-
 if "%USER%"=="g6.zm" echo STOP WATCHING 18+ CONTENT I KNOW IT WAS YOU
 if "%USER%"=="g6.zm" (
     echo You are currently banned.
