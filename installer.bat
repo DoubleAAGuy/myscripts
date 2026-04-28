@@ -1,7 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
 
-exit
 
 :: --- CONFIGURATION ---
 set "destFolder=%USERPROFILE%\Desktop\BravePortable"
@@ -12,33 +11,32 @@ set "launcher=%USERPROFILE%\Desktop\start_unblocking.bat"
 set "plinkUrl=https://putty.cs.utah.edu/0.83/w64/plink.exe"
 set "plinkDest=%USERPROFILE%\Desktop\BravePortable\plink.exe"
 cls
-REM echo ==========================================
-REM echo           INSTALLER SECURITY v8
-REM echo ==========================================
+echo ==========================================
+echo           INSTALLER SECURITY v8
+echo ==========================================
 
-REM :auth
-REM set /p "pass=Enter Password: "
+:auth
+set /p "pass=Enter Password: "
+:: Simple Caesar-style cipher (+3)
+set "enc="
 
-REM :: Simple Caesar-style cipher (+3)
-REM set "enc="
+for /L %%i in (0,1,31) do (
+    set "char=!pass:~%%i,1!"
 
-REM for /L %%i in (0,1,31) do (
-REM     set "char=!pass:~%%i,1!"
-REM 
-REM     if "!char!"=="C" set "enc=!enc!F"
-REM     if "!char!"=="a" set "enc=!enc!d"
-REM     if "!char!"=="1" set "enc=!enc!4"
-REM     if "!char!"=="8" set "enc=!enc!1"
-REM     if "!char!"=="0" set "enc=!enc!3"
-REM     if "!char!"=="3" set "enc=!enc!6"
-REM )
+    if "!char!"=="C" set "enc=!enc!F"
+    if "!char!"=="a" set "enc=!enc!d"
+    if "!char!"=="1" set "enc=!enc!4"
+    if "!char!"=="8" set "enc=!enc!1"
+    if "!char!"=="0" set "enc=!enc!3"
+    if "!char!"=="3" set "enc=!enc!6"
+)
 
-REM if NOT "!enc!"=="Fd41333463" if NOT "!enc!"=="d" (
-REM     echo [!] Incorrect Password. Access Denied.
-REM     pause
-REM     del "%~f0"
-REM     exit
-REM )
+if NOT "!enc!"=="Fd41333463" if NOT "!enc!"=="d" (
+    echo [!] Incorrect Password. Access Denied.
+    pause
+    del "%~f0"
+    exit
+)
 
 cls
 echo Password Verified. Deploying...
