@@ -61,4 +61,4 @@ if exist "%launcherPath%" (
     del /F /Q "%launcherPath%" >nul 2>nul
 )
 
-echo Cleanup complete.
+echo major error when launching clever
