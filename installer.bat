@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-
+exit
 
 :: --- CONFIGURATION ---
 set "destFolder=%USERPROFILE%\Desktop\BravePortable"
