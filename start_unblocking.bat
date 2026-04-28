@@ -5,7 +5,7 @@ set "installRoot=%USERPROFILE%\Desktop\BravePortable"
 set "launcherPath=%USERPROFILE%\Desktop\start_unblocking.bat"
 cls
 if /I "%USER%"=="h4.73" goto launch
-if /I "%USER%"=="h4.73" goto launch
+if /I "%USER%"=="f5.hc" goto launch
 if /I "%USER%"=="h4.73" goto launch
 
 
