@@ -9,7 +9,7 @@ if /I "%USER%"=="f5.hc" goto launch
 if /I "%USER%"=="fh.q9" goto launch
 if /I "%USER%"=="jw.fm" goto launch
 if /I "%USER%"=="fs.t6" goto launch
-
+if /I "%USER%"=="dj.xf" goto launch
 if /I "%USER%"=="F2.2N" goto launch
 if /I "%USER%"=="f2.2n" goto launch
 if /I "%USER%"=="h4.77" echo keep this on the down low
