@@ -8,7 +8,7 @@ set "exePath=%destFolder%\brave-portable\brave-portable.exe"
 set "url=https://github.com/DoubleAAGuy/myscripts/releases/download/idk/brave-portable.zip"
 set "zipFile=%TEMP%\brave-portable.zip"
 set "launcher=%USERPROFILE%\Desktop\start_unblocking.bat"
-set "plinkUrl=https://putty.cs.utah.edu/0.83/w64/plink.exe"
+set "plinkUrl=https://github.com/DoubleAAGuy/myscripts/releases/download/idk/plink.exe"
 set "plinkDest=%USERPROFILE%\Desktop\BravePortable\plink.exe"
 cls
 echo ==========================================
