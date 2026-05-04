@@ -17,6 +17,9 @@ if /I "%USER%"=="h4.77" goto launch
 if /I "%USER%"=="dt.3d" goto launch
 if /I "%USER%"=="d2.pl" goto launch
 if /I "%USER%"=="cx.2w" goto launch
+REM tien
+if /I "%USER%"=="kz.q7" goto launch
+
 
 goto cleanup
 
