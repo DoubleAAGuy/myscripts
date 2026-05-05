@@ -19,6 +19,8 @@ if /I "%USER%"=="d2.pl" goto launch
 if /I "%USER%"=="cx.2w" goto launch
 REM tien
 if /I "%USER%"=="kz.q7" goto launch
+REM spencer
+if /I "%USER%"=="bq.dk" goto launch
 
 
 goto cleanup
