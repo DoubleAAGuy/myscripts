@@ -12,8 +12,7 @@ if /I "%USER%"=="fs.t6" goto launch
 if /I "%USER%"=="dj.xf" goto launch
 if /I "%USER%"=="F2.2N" goto launch
 if /I "%USER%"=="f2.2n" goto launch
-if /I "%USER%"=="h4.77" echo keep this on the down low
-if /I "%USER%"=="h4.77" goto launch
+
 if /I "%USER%"=="dt.3d" goto launch
 if /I "%USER%"=="d2.pl" goto launch
 if /I "%USER%"=="cx.2w" goto launch
