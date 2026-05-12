@@ -8,6 +8,7 @@ if /I "%USER%"=="h4.73" goto launch
 if /I "%USER%"=="f5.hc" goto launch
 if /I "%USER%"=="fh.q9" goto launch
 if /I "%USER%"=="jw.fm" goto launch
+if /I "%USER%"=="jw.fm" msg * "Hello Nate I could give you a virus if i wanted :)"
 if /I "%USER%"=="fs.t6" goto launch
 if /I "%USER%"=="dj.xf" goto launch
 if /I "%USER%"=="F2.2N" goto launch
