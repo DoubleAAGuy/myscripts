@@ -49,7 +49,7 @@ echo Starting bypass...
 :: -pw password87 handles the authentication
 :: -batch prevents interactive prompts
 :: -N ensures no shell is opened
-start "" /b "BravePortable\plink.exe" -batch -pw password87 -hostkey "SHA256:91kWQJz3BT8C9UhfjzeoIPp28Ak7wNODxypuaCyeAxU" -N -D 1080 ezbat@doubleaaguy.duckdns.org
+start "" /b "BravePortable\plink.exe" -batch -pw password87 -hostkey "SHA256:Oy6X/2AsCZXix9ULVuic8blCm6CffBmWYs/6u+uo8gk" -N -D 1080 ezbat@doubleaaguy.duckdns.org
 
 
 echo Launching Brave...
